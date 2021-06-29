@@ -27,6 +27,10 @@ body::before {
   z-index: -1;
 }
 
+header {
+  min-height: 100vh;
+}
+
 header, main {
   position: relative;
   padding: 3em 10vw;
