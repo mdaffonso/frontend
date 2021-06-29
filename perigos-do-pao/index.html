@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Perigo do Pão</title>
+        <style>
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+            }
+
+            body {
+                display: flex;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 20px;
+            }
+
+            h1 {
+                margin: 1em 0 2em;
+                color: orange;
+                text-transform: uppercase;
+            }
+
+            h2 {
+                margin: 0 0 1em;
+            }
+
+            p {
+                margin: 2em 0 3em;
+            }
+
+            ul {
+                list-style-type: disc;
+                padding: 0;
+            }
+
+            li {
+                margin: 0.5em 0 0.5em 1em;
+                padding: 0;
+                font-variant: small-caps;
+            }
+
+            a {
+                text-decoration: none;
+                color: orange;
+                border-bottom: 2px solid orange;
+                padding-bottom: 0.25em;
+                transition: all 150ms linear;
+            }
+
+            a:hover {
+                color: rgb(5, 150, 102);
+                border-bottom: 4px solid rgb(5, 150, 102);
+                padding-bottom: 0.4em;
+            }
+
+            .container {
+                width: 100vw;
+                margin: 0 auto;
+            }
+
+            .columns {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 2rem;
+            }
+
+            .columns img {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+
+            .column {
+                max-width: 60%;
+            }
+
+            @media (min-width: 300px) {
+                body {
+                    font-size: 16px;
+                }
+
+                .container {
+                    width: 60%;
+                }
+
+                .columns img {
+                    max-width: 20em;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Os Perigos do Pão</h1>
+            <p>Muitos consideram o pão um alimento completo, rico em nutrientes, ideal para um café da manhã reforçado. 
+                O que não te explicam, no entanto, são os perigos associados ao consumo do pão.</p>
+
+            <div class="columns">
+                <img src="https://images.unsplash.com/photo-1534620808146-d33bb39128b2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80" alt="pão integral fatiado">
+                
+                <div class="column">
+                    <h2>Algumas estatísticas referentes ao consumo de pão</h2>
+                    <ul>
+                        <li>100% das pessoas que consomem pão morrem</li>
+                        <li>90% a 100% dos serial killers já comeram pão</li>
+                        <li>90% a 100% das pessoas que sofrem ataques cardíacos já comeram pão</li>
+                    </ul>
+                    <a href="https://users.wfu.edu/~dudlra13/bread.html" target="_blank">Saiba mais sobre este alimento perigosíssimo!</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&family=Roboto:wght@300;500;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Roboto', 'Arial', 'Verdana', sans-serif;
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  background: black;
+  min-height: 100vh;
+}
+
+body::before {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+  background-image: url('https://images.unsplash.com/photo-1430132594682-16e1185b17c5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: brightness(0.5);
+  z-index: -1;
+}
+
+header, main {
+  position: relative;
+  padding: 3em 10vw;
+}
+
+header h1 {
+  max-width: 12ch;
+  font-family: 'Poppins', sans-serif;
+  font-size: 3rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: rgb(255, 177, 22);
+  padding: 2em 0;
+  line-height: 1.5em;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+header p {
+  margin-bottom: 3em;
+  font-family: 'Poppins', 'Arial', sans-serif;
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 1.5em;
+  color: white;
+  max-width: 50ch;
+}
+
+main {
+  background: white;
+  color: black;
+}
+
+main ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+main ul li {
+  margin: 0.5em 0;
+}
+
+.list-description {
+  position: relative;
+  font-size: 1.3rem;
+  padding: 0.5em 1em;
+  margin-bottom: 2em;
+  max-width: 45ch;
+}
+
+.list-description::before {
+  content: '';
+  position: absolute;
+  top: 0.85em;
+  left: 0;
+  width: 0; 
+  height: 0; 
+  border: 5px solid transparent;
+  
+  border-left: 5px solid #ffb116;
+}
+
+.link {
+  position: relative;
+  display: block;
+  width: max-content;
+  font-size: 1.5rem;
+  color: white;
+  padding: 0.5em 1em;
+  background: transparent;
+  z-index: 1;
+}
+
+.link::before {
+  content: '';
+  position: absolute;
+  background: rgb(175, 26, 0);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index:-2;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  background: #ffb116;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  z-index: -1;
+
+  transition: width 200ms cubic-bezier(.82,-0.03,.19,1.38);
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+@media (min-width: 750px) {
+  header h1 {
+    font-size: 4rem;
+  }
+}
