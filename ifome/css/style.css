@@ -38,7 +38,7 @@ fieldset {
   border-radius: 0.5rem;
   border: 1px solid rgb(201, 201, 201);
   padding: 2rem;
-  margin: 2rem 0;
+  margin: 4rem 0;
 }
 
 fieldset legend {
@@ -62,6 +62,14 @@ fieldset legend {
   background: rgb(248, 248, 248);
   border: none;
   border-bottom: 1px solid black;
+  transition: background-color 200ms linear, border 200ms linear;
+}
+
+input:focus,
+select:focus {
+  background: rgb(237, 244, 247);
+  border-bottom: 1px solid rgb(42, 124, 238);
+  outline: none;
 }
 
 .address {
@@ -102,6 +110,21 @@ fieldset legend {
   padding: 0.75em 1.5em;
   font-size: 1.5rem;
   cursor: pointer;
+  transition: box-shadow 100ms linear, filter 100ms linear;
+}
+
+.buttons button:hover {
+  filter: brightness(0.9);
+}
+
+.buttons button:focus {
+  box-shadow: 0 0 0 0.25rem white, 0 0 0 0.5rem orange;
+  outline: none;
+}
+
+.buttons button:active {
+  transform: translateY(1px);
+  box-shadow: none;
 }
 
 .buttons .submit {
