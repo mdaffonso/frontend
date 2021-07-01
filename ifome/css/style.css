@@ -101,6 +101,7 @@ fieldset legend {
 .buttons button {
   padding: 0.75em 1.5em;
   font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .buttons .submit {

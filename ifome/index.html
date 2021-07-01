@@ -16,7 +16,7 @@
     </header>
 
     <main>
-      <form action="#" method="POST">
+      <form action="" method="POST">
         <fieldset>
           <legend>Dados pessoais</legend>
           <div class="form">
@@ -173,5 +173,12 @@
         </div>
       </form>
     </main>
+
+    <script>
+      document.querySelector("form").addEventListener("submit", e => {
+        e.preventDefault();
+        alert("Dados enviados com sucesso!");
+      });
+    </script>
   </body>
 </html>
