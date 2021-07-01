@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iFome</title>
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <img src="./img/logo-white.png" alt="logo ifome" />
+      <h2>Gosto muito disso tudo!</h2>
+    </header>
+
+    <main>
+      <form action="#" method="POST">
+        <fieldset>
+          <legend>Dados pessoais</legend>
+          <div class="form">
+            <div class="form-group">
+              <label for="nome">Nome</label>
+              <input type="text" name="nome" id="nome" />
+            </div>
+
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="email" name="email" id="email" />
+            </div>
+
+            <div class="form-group address">
+              <div>
+                <label for="rua">Rua</label>
+                <input type="text" name="rua" id="rua" />
+              </div>
+
+              <div>
+                <label for="numero">Nº</label>
+                <input type="number" name="numero" id="numero" />
+              </div>
+            </div>
+
+            <div class="form-group full">
+              <label for="complemento">Complemento</label>
+              <input type="text" name="complemento" id="complemento" />
+            </div>
+
+            <div class="form-group address">
+              <div>
+                <label for="cidade">Cidade</label>
+                <input type="text" name="cidade" id="cidade" />
+              </div>
+
+              <div>
+                <label for="uf">UF</label>
+                <select>
+                  <option disabled selected value></option>
+                  <option>AC</option>
+                  <option>AL</option>
+                  <option>AP</option>
+                  <option>AM</option>
+                  <option>BA</option>
+                  <option>CE</option>
+                  <option>DF</option>
+                  <option>ES</option>
+                  <option>GO</option>
+                  <option>MA</option>
+                  <option>MT</option>
+                  <option>MS</option>
+                  <option>MG</option>
+                  <option>PA</option>
+                  <option>PB</option>
+                  <option>PR</option>
+                  <option>PE</option>
+                  <option>PI</option>
+                  <option>RJ</option>
+                  <option>RN</option>
+                  <option>RS</option>
+                  <option>RO</option>
+                  <option>RR</option>
+                  <option>SC</option>
+                  <option>SP</option>
+                  <option>SE</option>
+                  <option>TO</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Escolha seu lanche</legend>
+          <div class="form-group">
+            <select>
+              <option disabled selected value>Selecione uma opção</option>
+              <optgroup label="Salgado">
+                <option>Pastel de cogumelos</option>
+                <option>Lasanha bolonhesa de cenoura e nozes</option>
+                <option>Hambúrguer</option>
+              </optgroup>
+
+              <optgroup label="Doce">
+                <option>Brigadeiro</option>
+                <option>Torta de chocolate meio amargo</option>
+              </optgroup>
+            </select>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Opcionais</legend>
+          <div class="checks">
+            <div class="check-group">
+              <input type="checkbox" name="colher" id="colher" />
+              <label for="colher">Colher</label>
+            </div>
+
+            <div class="check-group">
+              <input type="checkbox" name="garfo" id="garfo" />
+              <label for="garfo">Garfo</label>
+            </div>
+
+            <div class="check-group">
+              <input type="checkbox" name="hashi" id="hashi" />
+              <label for="hashi">Hashi</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Método de pagamento</legend>
+          <div class="checks">
+            <div class="check-group">
+              <input
+                type="radio"
+                name="pagamento"
+                id="dinheiro"
+                value="dinheiro"
+              />
+              <label for="dinheiro">Dinheiro</label>
+            </div>
+
+            <div class="check-group">
+              <input type="radio" name="pagamento" id="debito" value="debito" />
+              <label for="debito">Débito</label>
+            </div>
+
+            <div class="check-group">
+              <input
+                type="radio"
+                name="pagamento"
+                id="credito"
+                value="credito"
+                checked
+              />
+              <label for="credito">Crédito</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Agendar entrega</legend>
+          <div class="form-group">
+            <input type="datetime-local" name="data" id="data" />
+          </div>
+        </fieldset>
+
+        <div class="buttons">
+          <button type="submit" class="submit">Fazer pedido</button>
+          <button type="reset" class="reset">Apagar</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
