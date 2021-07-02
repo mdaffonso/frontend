@@ -12,10 +12,12 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-header,
-main,
-footer {
+header {
   padding: 2rem;
+}
+
+main {
+  padding: 0.35rem;
 }
 
 header {
@@ -125,7 +127,8 @@ select:focus {
   padding: 0.75em 1.5em;
   font-size: 1.5rem;
   cursor: pointer;
-  transition: box-shadow 100ms linear, filter 100ms linear;
+  transition: 100ms linear;
+  transition-property: box-shadow, filter;
 }
 
 .buttons button:hover {
@@ -159,15 +162,13 @@ select:focus {
     padding: 4rem;
   }
 
-  main,
-  footer {
+  main {
     padding: 4rem 10vw;
   }
 }
 
 @media (min-width: 900px) {
-  main,
-  footer {
+  main {
     padding: 4rem 25vw;
   }
 }
