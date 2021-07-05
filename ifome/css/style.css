@@ -265,11 +265,11 @@ select:focus {
 
 #modal .modal-close {
   position: absolute;
-  top: -2rem;
-  right: -2rem;
+  top: -1.5rem;
+  right: -1.5rem;
   font-size: 2rem;
   aspect-ratio: 1 / 1;
-  width: 4rem;
+  width: 3rem;
   border-radius: 50%;
   border: none;
   cursor: pointer;
