@@ -173,6 +173,7 @@ select:focus {
 }
 
 .buttons button {
+  width: calc(100% - 2rem);
   padding: 0.75em 1.5em;
   font-size: 1.5rem;
   cursor: pointer;
@@ -217,6 +218,10 @@ select:focus {
 
   .form {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .buttons button {
+    width: unset;
   }
 }
 
