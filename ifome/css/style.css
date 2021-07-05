@@ -76,6 +76,11 @@ fieldset legend::before {
   background: white;
 }
 
+input:hover,
+select:hover {
+  filter: brightness(0.97);
+}
+
 .form {
   display: grid;
   grid-template-columns: 1fr;
@@ -94,7 +99,7 @@ fieldset legend::before {
   border: none;
   border-bottom: 1px solid black;
   transition: 150ms linear;
-  transition-property: background-color, border;
+  transition-property: background-color, border, filter;
 }
 
 input:focus,
