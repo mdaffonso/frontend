@@ -27,7 +27,12 @@ header {
   gap: 4rem;
   justify-content: space-between;
   align-items: center;
-  background: #e12b1d;
+  background: #da0f00;
+}
+
+header img {
+  max-width: 300px;
+  height: auto;
 }
 
 header h2 {
@@ -46,23 +51,34 @@ fieldset {
 }
 
 fieldset:focus-within {
-  box-shadow: 0.5rem 0.5rem 3rem rgb(240, 240, 240),
-    0 0 5rem 2rem rgb(255, 250, 247);
+  box-shadow: 
+    0.5rem 0.5rem 3rem rgb(240, 240, 240),
+    0 0 0 0.075rem rgb(255, 162, 0);
 }
 
 fieldset legend {
   text-transform: uppercase;
   font-weight: 200;
   font-size: 1.5rem;
+  position: relative;
+  color: rgb(152, 73, 8);
+  z-index: 1;
 }
 
-fieldset legend {
-  color: rgb(152, 73, 8);
+fieldset legend::before {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
 }
 
 .form {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 2rem;
 }
 
@@ -78,7 +94,7 @@ fieldset legend {
   border: none;
   border-bottom: 1px solid black;
   transition: 150ms linear;
-  transition-property: background-color, border, box-shadow;
+  transition-property: background-color, border;
 }
 
 input:focus,
@@ -86,14 +102,13 @@ select:focus {
   background: rgb(250, 247, 242);
   border-bottom: 1px solid rgb(224, 159, 37);
   outline: none;
-  box-shadow: 0 2px white, 0 3px rgb(247, 192, 89);
 }
 
 .address {
   grid-column-start: 1;
   grid-column-end: -1;
   display: grid;
-  grid-template-columns: 5fr 1fr;
+  grid-template-columns: 5fr 2fr;
   gap: 1rem;
 }
 
@@ -112,6 +127,21 @@ select:focus {
 .check-group,
 .check-group * {
   cursor: pointer;
+}
+
+.check-group input {
+  position: relative;
+}
+
+.check-group input:focus::before {
+  position: absolute;
+  content: '';
+  border: 0.33rem solid transparent;
+  border-left: 0.33rem solid rgb(255, 187, 0);
+  height: 0;
+  width: 0;
+  top: 1px;
+  left: -0.6rem;
 }
 
 .buttons {
@@ -159,11 +189,15 @@ select:focus {
 
 @media (min-width: 600px) {
   header {
-    padding: 4rem;
+    padding: 6rem;
   }
 
   main {
     padding: 4rem 10vw;
+  }
+
+  .form {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
