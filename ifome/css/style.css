@@ -231,6 +231,76 @@ select:focus {
   background: transparent;
 }
 
+#modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#modal::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: black;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+#modal.out {
+  display: none;
+}
+
+#modal.transition {
+  animation: fade-out 150ms linear forwards;
+  opacity: 1;
+}
+
+#modal.in {
+  animation: fade-in 150ms linear forwards;
+}
+
+#modal .modal-close {
+  position: absolute;
+  top: -2rem;
+  right: -2rem;
+  font-size: 2rem;
+  aspect-ratio: 1 / 1;
+  width: 4rem;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background: red;
+  color: white;
+  transition: box-shadow 100ms linear;
+}
+
+#modal .modal-close:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.5rem yellow;
+}
+
+#modal .modal-close.swirl {
+  animation: swirl 1s cubic-bezier(.65,-0.58,.42,1.63);
+}
+
+#modal .modal-success {
+  position: relative;
+  background: green;
+  border-radius: 1rem;
+  color: white;
+  padding: 5rem;
+  box-shadow: 1rem 1rem 5rem rgba(0, 0, 0, 0.25);
+}
+
+#modal .modal-success h1 {
+  max-width: 12ch;
+  font-weight: 300;
+}
+
 @media (min-width: 600px) {
   header {
     padding: 6rem;
@@ -252,5 +322,23 @@ select:focus {
 @media (min-width: 900px) {
   main {
     padding: 4rem 25vw;
+  }
+}
+
+@keyframes swirl {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  to {
+    opacity: 0;
   }
 }
