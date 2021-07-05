@@ -137,19 +137,30 @@ select:focus {
   gap: 0.35rem;
 }
 
-.check-group input {
+.check-group input,
+.check-group label {
   position: relative;
 }
 
-.check-group input:focus::before {
+.check-group input:focus::before,
+.check-group input:focus + label::after {
   position: absolute;
   content: '';
-  border: 0.33rem solid transparent;
-  border-left: 0.33rem solid rgb(255, 187, 0);
+  border: 0.375rem solid transparent;
   height: 0;
   width: 0;
-  top: 1px;
-  left: -0.6rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.check-group input:focus::before {
+  border-left: 0.375rem solid rgb(255, 187, 0);
+  left: -0.75rem;
+}
+
+.check-group input:focus + label::after {
+  border-right: 0.375rem solid rgb(255, 187, 0);
+  right: -0.75rem;
 }
 
 .buttons {
