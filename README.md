@@ -11,4 +11,5 @@ Alternativamente, você pode visitar diretamente os links internos:
 + [Hashes e Criptografia](https://mdaffonso.github.io/frontend/hashes/)
 + [UI Resources](https://mdaffonso.github.io/frontend/ui-resources/)
 + [Formulários](https://mdaffonso.github.io/frontend/forms/)
-+ [iFome](https://mdaffonso.github.io/frontend/ifome/)
++ [ifome](https://mdaffonso.github.io/frontend/ifome/)
++ [Formulário de Cadastro de Cliente](https://mdaffonso.github.io/frontend/cadastro/)

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+  <title>Cadastrar Cliente</title>
+</head>
+<body>
+  <header>
+    <h1>Cadastrar Cliente</h1>
+  </header>
+  <main>
+    <form action="">
+      <fieldset>
+        <div class="input-group">
+          <label for="name">Nome</label>
+          <input type="text" id="name" name="name" class="input-field" required />
+        </div>
+  
+        <div class="input-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" class="input-field" required />
+        </div>
+  
+        <div class="input-group">
+          <label for="phone">Telefone</label>
+          <input type="text" id="phone" name="phone" class="input-field masked" placeholder="(XX) X XXXX XXXX" />
+        </div>
+  
+        <div class="input-group">
+          <label for="birthday">Aniversário</label>
+          <input type="date" id="birthday" class="input-field" name="birthday" />
+        </div>
+
+        <div class="checkbox-group">
+          <input type="checkbox" name="disparar" id="disparar" checked />
+          <label for="disparar">Disparar e-mail automático de boas vindas para o cliente?</label>
+        </div>
+      </fieldset>
+
+      <div class="buttons">
+        <button type="submit">enviar</button>
+        <button type="reset">redefinir</button>
+      </div>
+    </form>
+  </main>
+
+  <div id="modal" class="out">
+    <div class="modal-success">
+      <button class="modal-close swirl">&times;</button>
+      <h2>
+        Cliente cadastrado com sucesso! 🎉
+      </h2>
+    </div>
+  </div>
+
+  <script src="./js/masking-input.js" data-autoinit="true"></script>
+  <script>
+    const closeModal = () => {
+      modalClasses.add("transition")
+      modalClasses.remove("in")
+      const transitionOut = setTimeout(() => {
+        modalClasses.remove("transition")
+        modalClasses.add("out")
+      }, 150)
+
+      document.querySelector("form").reset()
+    }
+
+    const modalClasses = document.querySelector("#modal").classList
+    document.querySelector("form").addEventListener("submit", e => {
+      e.preventDefault()
+      modalClasses.remove("out")
+      modalClasses.add("in")
+    });
+
+    document.querySelector("#modal .modal-close").addEventListener("click", closeModal)
+  </script>
+</body>
+</html>
