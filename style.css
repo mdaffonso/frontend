@@ -99,9 +99,10 @@ main ul li {
 }
 
 .link {
+  word-wrap: break-word;
   position: relative;
-  display: block;
-  width: max-content;
+  display: flex;
+  max-width: max-content;
   font-size: 1.5rem;
   color: white;
   margin-bottom: 1rem;
