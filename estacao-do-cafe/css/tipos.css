@@ -1,0 +1,86 @@
+html {
+  --marrom-forte: #1a100f;
+  --marrom-medio: #34211d;
+  --marrom-claro: #ab775f;
+  --laranja-fechado: #9a2b09;
+  --laranja-aberto: #eb5f1e;
+}
+body {
+  background-color: var(--marrom-forte);
+}
+main {
+  padding: 10rem 0 5rem;
+}
+h2 {
+  margin: 0 0 .5em;
+  font-size: clamp(2rem, 5vw, 4rem);
+  color: var(--creme) !important;
+  padding: 0 0.25rem;
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  gap: 1rem;
+  padding: 0 0.25rem;
+}
+
+.card img {
+  max-width: 100%;
+  /* height: auto; */
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+}
+
+.card {
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: ease-in-out 0.25s;
+  transition-property: box-shadow, filter, transform;
+}
+.card:hover {
+  transform: scale(1.025);
+  filter: brightness(1.15);
+  z-index: 1;
+}
+
+.card:focus-within {
+  box-shadow: 0 0 0 0.25rem var(--marrom-forte),
+    0 0 0 0.5rem var(--laranja-aberto);
+}
+
+.card-title {
+  color: var(--marrom-forte);
+}
+
+.btn-primary {
+  background-color: var(--laranja-fechado);
+  border-color: transparent;
+}
+.btn-primary:hover {
+  background-color: var(--laranja-aberto);
+  border-color: white;
+}
+.btn-primary:focus {
+  background-color: var(--laranja-fechado);
+  box-shadow:
+    0 0 0.5rem 0 var(--laranja-aberto);
+  border-color: transparent;
+}
+.btn-primary:active {
+  background-color: #ff793b;
+}
+@media (min-width: 600px) {
+  .card-grid,
+  h2 {
+    padding-left: clamp(5rem, 15vw, 30rem);
+    padding-right: clamp(5rem, 15vw, 30rem);
+  }
+}
+@media (min-width: 900px) {
+  .card-grid {
+    grid-template-columns: repeat(3, minmax(17rem, 1fr));
+  }
+}
